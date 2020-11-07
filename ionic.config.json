@@ -1,0 +1,7 @@
+{
+  "name": "academyTickets",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
