@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <ion-item lines="none">
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input
+        type="email"
+        formControlName="email"
+        placeholder="jhon@doe.com"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">First name</ion-label>
+      <ion-input
+        type="text"
+        formControlName="first_name"
+        placeholder="jhon"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">Last name</ion-label>
+      <ion-input
+        type="text"
+        formControlName="last_name"
+        placeholder="Doe"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <ion-button
+      expand="block"
+      color="primary"
+      type="submit"
+      [disabled]="registerForm.invalid"
+      class="ion-padding-horizontal ion-margin-vertical"
+    >
+      <ion-icon slot="start" name="checkmark"></ion-icon>Register
+    </ion-button>
+  </form>
+</ion-content>
